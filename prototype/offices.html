@@ -105,17 +105,47 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#officeSetup"
-                    aria-expanded="true" aria-controls="officeSetup">
+                <a class="nav-link collapsed" href="#officeSetup" data-toggle="collapse" data-target="#officeSetup"
+                   aria-expanded="true" aria-controls="officeSetup">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Office setup</span>
                 </a>
                 <div id="officeSetup" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Office setup:</h6>
-                        <a class="collapse-item" href="buttons.html">Registrars</a>
-                        <a class="collapse-item" href="cards.html">Accounting</a>
-                        <a class="collapse-item" href="cards.html">Department Deans</a>
+                        <a class="collapsed collapse-item" href="#registrarsMenu" data-toggle="collapse" data-target="#registrarsMenu"
+                           aria-expanded="true" aria-controls="registrarsMenu" data-parent="#officeSetup">
+                            <span>Registrars</span>
+                        </a>
+                        <div id="registrarsMenu" class="collapse" data-parent="#officeSetup">
+                            <div class="collapse-inner rounded">
+                                <h6 class="collapse-header">Registrars setup:</h6>
+                                <a class="collapse-item" href="buttons.html">Users</a>
+                                <a class="collapse-item" href="cards.html">Students</a>
+                                <a class="collapse-item" href="cards.html">Requirements</a>
+                            </div>
+                        </div>
+                        <a class="collapsed collapse-item" href="#accountingsMenu" data-toggle="collapse" data-target="#accountingsMenu"
+                           aria-expanded="true" aria-controls="accountingsMenu" data-parent="#officeSetup">
+                            <span>Accounting</span>
+                        </a>
+                        <div id="accountingsMenu" class="collapse" data-parent="#officeSetup">
+                            <div class="collapse-inner rounded">
+                                <h6 class="collapse-header">Accountings setup:</h6>
+                                <a class="collapse-item" href="buttons.html">Users</a>
+                                <a class="collapse-item" href="cards.html">Student Accounts</a>
+                            </div>
+                        </div>
+                        <a class="collapsed collapse-item" href="#departmentsMenu" data-toggle="collapse" data-target="#departmentsMenu"
+                           aria-expanded="true" aria-controls="departmentsMenu" data-parent="#officeSetup">
+                            <span>Department Deans</span>
+                        </a>
+                        <div id="departmentsMenu" class="collapse" data-parent="#officeSetup">
+                            <div class="collapse-inner rounded">
+                                <h6 class="collapse-header">Departments setup:</h6>
+                                <a class="collapse-item" href="buttons.html">Users</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </li>
