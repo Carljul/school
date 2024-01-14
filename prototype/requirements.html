@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>School v1 - Dashboard</title>
+    <title>School v1 - Requirements</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,6 +20,19 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="css/bootstrap-select.css" rel="stylesheet">
+
+
+    <style>
+        .my-select {
+            border: 1px solid grey;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -42,7 +55,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -91,7 +104,7 @@
                 </div>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#officeSetup" data-toggle="collapse" data-target="#officeSetup"
                    aria-expanded="true" aria-controls="officeSetup">
                     <i class="fas fa-fw fa-cog"></i>
@@ -338,129 +351,118 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Requirements</h1>
+                        <a
+                            href="#"
+                            class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                            data-toggle="modal" data-target="#addRequirementsModal"
+                        >
+                            <i class="fas fa-plus fa-sm text-white-50"></i> Add requirement
+                        </a>
                     </div>
 
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Enrolles (2024 - 2025)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Users</h6>
                         </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Not Completed (Student Requirements)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Not Completed (Teacher Requirements)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Open Rooms</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">25</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Enrollees comparison</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> 2022
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> 2023
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> 2024
-                                        </span>
-                                    </div>
-                                </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Requirements</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Requirements</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>College</td>
+                                            <td class="d-flex align-middle">
+                                                <a
+                                                    href="#"
+                                                    class="d-none d-sm-inline-block text-center"
+                                                    data-toggle="modal"
+                                                    data-target="#imageModal"
+                                                    style="flex: 1;"
+                                                >
+                                                    View Requirements
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-warning btn-icon-split btn-sm">
+                                                    <span class="icon text-white">
+                                                        <i class="fas fa-edit"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#" class="btn btn-danger btn-icon-split btn-sm">
+                                                    <span class="icon text-white">
+                                                        <i class="fas fa-trash"></i>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Elementary</td>
+                                            <td class="d-flex align-middle">
+                                                <a
+                                                    href="#"
+                                                    class="d-none d-sm-inline-block text-center"
+                                                    data-toggle="modal"
+                                                    data-target="#imageModal"
+                                                    style="flex: 1;"
+                                                >
+                                                    View Requirements
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-warning btn-icon-split btn-sm">
+                                                    <span class="icon text-white">
+                                                        <i class="fas fa-edit"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#" class="btn btn-danger btn-icon-split btn-sm">
+                                                    <span class="icon text-white">
+                                                        <i class="fas fa-trash"></i>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>High School</td>
+                                            <td class="d-flex align-middle">
+                                                <a
+                                                    href="#"
+                                                    class="d-none d-sm-inline-block text-center"
+                                                    data-toggle="modal"
+                                                    data-target="#imageModal"
+                                                    style="flex: 1;"
+                                                >
+                                                    View Requirements
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="btn btn-warning btn-icon-split btn-sm">
+                                                    <span class="icon text-white">
+                                                        <i class="fas fa-edit"></i>
+                                                    </span>
+                                                </a>
+                                                <a href="#" class="btn btn-danger btn-icon-split btn-sm">
+                                                    <span class="icon text-white">
+                                                        <i class="fas fa-trash"></i>
+                                                    </span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -501,6 +503,90 @@
         </div>
     </div>
 
+    <!-- Enroll Modal-->
+    <div class="modal fade" id="addRequirementsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add a Requirements</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="">Select education level for requirements</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">College</option>
+                                <option value="">High School</option>
+                                <option value="">Elementary</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="selectpicker my-select form-control" title="Select Requirements" data-container="body" data-live-search="true" data-hide-disabled="true" data-actions-box="true" data-virtual-scroll="false">
+                                <option value="">NSO</option>
+                                <option value="">Form 137</option>
+                                <option value="">Form 138</option>
+                                <option value="">High school diploma</option>
+                                <option value="">College Diploma</option>
+                                <option value="">Others</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="#">Add</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Requirements Modal-->
+    <div class="modal fade" id="requirementsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Showing existing requirements of Julcarl Selma</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>2x2 picture</li>
+                        <li>Form 137</li>
+                        <li>NSO (PSA)</li>
+                        <li>High School Diploma</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal-->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul>
+                        <li>Form 137</li>
+                        <li>Form 138</li>
+                        <li>High School Diploma</li>
+                        <li>NSO</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -511,12 +597,27 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
+
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.my-select').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+                console.log(['e', e])
+                console.log(['clickedIndex', clickedIndex])
+                console.log(['isSelected', isSelected])
+                console.log(['previousValue', previousValue])
+            });
+
+
+        })
+    </script>
 
 </body>
 
