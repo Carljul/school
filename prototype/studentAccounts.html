@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>School v1 - Departments</title>
+    <title>School v1 - Accounting Users</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
 
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -70,7 +71,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#academicSetup"
                     aria-expanded="true" aria-controls="academicSetup">
                     <i class="fas fa-fw fa-cog"></i>
@@ -79,7 +80,7 @@
                 <div id="academicSetup" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Academic setup:</h6>
-                        <a class="collapse-item active" href="departments.html">Departments</a> <!-- Register the ff. College of Computer Studies, College of Education -->
+                        <a class="collapse-item" href="departments.html">Departments</a> <!-- Register the ff. College of Computer Studies, College of Education -->
                         <a class="collapse-item" href="educationLevel.html">Education Level</a> <!-- register ff. values: Highschool, elementary, College -->
                         <a class="collapse-item" href="semester.html">Semester / School Year</a><!-- Register the ff. First Semester 2024 - 2025, Second semester 2024, 2024-2025 -->
                         <a class="collapse-item" href="courses.html">Courses</a> <!-- Register the ff. BSIT, BSCS, STEM, HUMMS -->
@@ -103,7 +104,7 @@
                 </div>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#officeSetup" data-toggle="collapse" data-target="#officeSetup"
                    aria-expanded="true" aria-controls="officeSetup">
                     <i class="fas fa-fw fa-cog"></i>
@@ -131,7 +132,8 @@
                         <div id="accountingsMenu" class="collapse" data-parent="#officeSetup">
                             <div class="collapse-inner rounded">
                                 <h6 class="collapse-header">Accountings setup:</h6>
-                                <a class="collapse-item" href="studentAccounts.html">Student Accounts</a>
+                                <a class="collapse-item" href="accountingsUsers.html">Users</a>
+                                <a class="collapse-item active" href="studentAccounts.html">Student Accounts</a>
                                 <a class="collapse-item" href="subjectPrices.html">Subject Prices</a>
                             </div>
                         </div>
@@ -350,42 +352,71 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Departments</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Accounting Users</h1>
                         <a
                             href="#"
                             class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-                            data-toggle="modal" data-target="#roomModal"
+                            data-toggle="modal" data-target="#addRegistrarModal"
                         >
-                            <i class="fas fa-plus fa-sm text-white-50"></i> Add department
+                            <i class="fas fa-plus fa-sm text-white-50"></i> Add User
                         </a>
                     </div>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Departments</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Users</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Department</th>
-                                            <th>Rooms</th>
+                                            <th>Profile</th>
+                                            <th>ID #</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Contact #</th>
+                                            <th>Active?</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Department</th>
-                                            <th>Rooms</th>
+                                            <th>Profile</th>
+                                            <th>ID #</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Contact #</th>
+                                            <th>Active?</th>
                                             <th>Actions</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td>Computer Studies Department</td>
+                                            <td class="d-flex align-middle">
+                                                <a
+                                                    href="#"
+                                                    class="d-none d-sm-inline-block text-center"
+                                                    data-toggle="modal"
+                                                    data-target="#imageModal"
+                                                    style="flex: 1;"
+                                                >
+                                                    <img class="img-profile rounded-circle" width="40" src="img/undraw_profile.svg">
+                                                </a>
+                                            </td>
+                                            <td>14-2027601</td>
+                                            <td>Julcarl L. Selma</td>
                                             <td>
-                                                <p>401, 402, 403, 404, 405, 406</p>
+                                                <a href="mailto:julcarllselma@gmail.com?subject='Trying to connect with you!'">
+                                                    julcarllselma@gmail.com
+                                                </a>
+                                            </td>
+                                            <td>09012345678</td>
+                                            <td>
+                                                <div class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                                    <label class="custom-control-label" for="customSwitch1"></label>
+                                                </div>
                                             </td>
                                             <td>
                                                 <a href="#" class="btn btn-warning btn-icon-split btn-sm">
@@ -401,99 +432,30 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Computer Studies Department</td>
-                                            <td>
-                                                <p>401, 402, 403, 404, 405, 406</p>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="btn btn-warning btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-edit"></i>
-                                                    </span>
-                                                </a>
-                                                <a href="#" class="btn btn-danger btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-trash"></i>
-                                                    </span>
+                                            <td class="d-flex align-middle">
+                                                <a
+                                                    href="#"
+                                                    class="d-none d-sm-inline-block text-center"
+                                                    data-toggle="modal"
+                                                    data-target="#imageModal"
+                                                    style="flex: 1;"
+                                                >
+                                                    <img class="img-profile rounded-circle" width="40" src="img/undraw_profile.svg">
                                                 </a>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Computer Studies Department</td>
+                                            <td>14-2027602</td>
+                                            <td>Yasmin T. Selma</td>
                                             <td>
-                                                <p>401, 402, 403, 404, 405, 406</p>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="btn btn-warning btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-edit"></i>
-                                                    </span>
-                                                </a>
-                                                <a href="#" class="btn btn-danger btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-trash"></i>
-                                                    </span>
+                                                <a href="mailto:yasmintapado@gmail.com?subject='Trying to connect with you!'">
+                                                    yasmintapado@gmail.com
                                                 </a>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Computer Studies Department</td>
+                                            <td>09012345678</td>
                                             <td>
-                                                <p>401, 402, 403, 404, 405, 406</p>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="btn btn-warning btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-edit"></i>
-                                                    </span>
-                                                </a>
-                                                <a href="#" class="btn btn-danger btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-trash"></i>
-                                                    </span>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Computer Studies Department</td>
-                                            <td>
-                                                <p>401, 402, 403, 404, 405, 406</p>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="btn btn-warning btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-edit"></i>
-                                                    </span>
-                                                </a>
-                                                <a href="#" class="btn btn-danger btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-trash"></i>
-                                                    </span>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Computer Studies Department</td>
-                                            <td>
-                                                <p>401, 402, 403, 404, 405, 406</p>
-                                            </td>
-                                            <td>
-                                                <a href="#" class="btn btn-warning btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-edit"></i>
-                                                    </span>
-                                                </a>
-                                                <a href="#" class="btn btn-danger btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-trash"></i>
-                                                    </span>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Computer Studies Department</td>
-                                            <td>
-                                                <p>401, 402, 403, 404, 405, 406</p>
+                                                <div class="d-flex custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
+                                                    <label class="custom-control-label" for="customSwitch2"></label>
+                                                </div>
                                             </td>
                                             <td>
                                                 <a href="#" class="btn btn-warning btn-icon-split btn-sm">
@@ -551,36 +513,187 @@
     </div>
 
     <!-- Room Modal-->
-    <div class="modal fade" id="roomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    
+    <!-- Enroll Modal-->
+    <div class="modal fade" id="addRegistrarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add new Department</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add a Registrar Account</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form class="user">
-                        <div class="form-group row">
-                            <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" class="form-control" id="exampleFirstName"
-                                    placeholder="Department Name">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="student-tab" data-toggle="tab" data-target="#student" type="button" role="tab" aria-controls="home" aria-selected="true">Info</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="requirements-tab" data-toggle="tab" data-target="#requirements" type="button" role="tab" aria-controls="profile" aria-selected="false">Requirements</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="address-tab" data-toggle="tab" data-target="#address" type="button" role="tab" aria-controls="address" aria-selected="false">Address</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="student" role="tabpanel" aria-labelledby="student-tab">
+                                <div class="py-4">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="firstname">First name</label>
+                                            <input type="text" class="form-control" id="firstname" />
+                                        </div>
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="middlename">Middle name</label>
+                                            <input type="text" class="form-control" id="middlename" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="lastname">Last name</label>
+                                            <input type="text" class="form-control" id="lastname" />
+                                        </div>
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="suffix">Suffix <small>(Optional)</small></label>
+                                            <select name="" id="suffix" class="form-control">
+                                                <option value="" selected disabled>Select suffix</option>
+                                                <option value="1">Jr.</option>
+                                                <option value="2">Sr.</option>
+                                                <option value="3">I</option>
+                                                <option value="4">II</option>
+                                                <option value="5">III</option>
+                                                <option value="6">IV</option>
+                                                <option value="6">V</option>
+                                                <option value="6">VI</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <select multiple class="selectpicker my-select form-control" title="Select Rooms" data-container="body" data-live-search="true" data-hide-disabled="true" data-actions-box="true" data-virtual-scroll="false">
-                                <option value="401">401</option>
-                                <option value="402">402</option>
-                                <option value="403">403</option>
-                            </select>
+                            <div class="tab-pane fade" id="requirements" role="tabpanel" aria-labelledby="requirements-tab">
+                                <ul class="py-4">
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                              2x2
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                              Form 137
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                              Form 138
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                              High School Diploma
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Good Moral
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Birth Certificate
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                College Diploma
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Transcript of Records
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
+                                <div class="py-4">
+                                    <div class="form-group row">
+                                        <div class="col-sm-12 mb-3 mb-sm-0">
+                                            <label for="address1">Address 1 (Optional)</label>
+                                            <input type="text" class="form-control" id="address1" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12 mb-3 mb-sm-0">
+                                            <label for="address2">Address 2 (Optional)</label>
+                                            <input type="text" class="form-control" id="address2" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="py-4">
+                                    <div class="form-group row">
+                                        <div class="col-sm-12 mb-3 mb-sm-0">
+                                            <label for="mobileNumber">Mobile Number</label>
+                                            <input type="text" class="form-control" id="mobileNumber" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12 mb-3 mb-sm-0">
+                                            <label for="telephoneNumber">Telephone Number</label>
+                                            <input type="text" class="form-control" id="telephoneNumber" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="#">Add</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal-->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                 </div>
             </div>
         </div>

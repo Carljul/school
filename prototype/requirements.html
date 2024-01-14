@@ -113,7 +113,7 @@
                 <div id="officeSetup" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Office setup:</h6>
-                        <a class="collapsed collapse-item" href="#registrarsMenu" data-toggle="collapse" data-target="#registrarsMenu"
+                        <a class="collapsed collapse-item active" href="#registrarsMenu" data-toggle="collapse" data-target="#registrarsMenu"
                            aria-expanded="true" aria-controls="registrarsMenu" data-parent="#officeSetup">
                             <span>Registrars</span>
                         </a>
@@ -122,7 +122,7 @@
                                 <h6 class="collapse-header">Registrars setup:</h6>
                                 <a class="collapse-item" href="registrarsUsers.html">Users</a>
                                 <a class="collapse-item" href="students.html">Students</a>
-                                <a class="collapse-item" href="requirements.html">Requirements</a>
+                                <a class="collapse-item active" href="requirements.html">Requirements</a>
                             </div>
                         </div>
                         <a class="collapsed collapse-item" href="#accountingsMenu" data-toggle="collapse" data-target="#accountingsMenu"
@@ -132,8 +132,9 @@
                         <div id="accountingsMenu" class="collapse" data-parent="#officeSetup">
                             <div class="collapse-inner rounded">
                                 <h6 class="collapse-header">Accountings setup:</h6>
-                                <a class="collapse-item" href="buttons.html">Users</a>
-                                <a class="collapse-item" href="cards.html">Student Accounts</a>
+                                <a class="collapse-item" href="accountingsUsers.html">Users</a>
+                                <a class="collapse-item" href="studentAccounts.html">Student Accounts</a>
+                                <a class="collapse-item" href="subjectPrices.html">Subject Prices</a>
                             </div>
                         </div>
                         <a class="collapsed collapse-item" href="#departmentsMenu" data-toggle="collapse" data-target="#departmentsMenu"
@@ -143,7 +144,7 @@
                         <div id="departmentsMenu" class="collapse" data-parent="#officeSetup">
                             <div class="collapse-inner rounded">
                                 <h6 class="collapse-header">Departments setup:</h6>
-                                <a class="collapse-item" href="buttons.html">Users</a>
+                                <a class="collapse-item" href="departmentsUser.html">Users</a>
                             </div>
                         </div>
                     </div>
@@ -527,12 +528,16 @@
                         <div class="form-group">
                             <select class="selectpicker my-select form-control" title="Select Requirements" data-container="body" data-live-search="true" data-hide-disabled="true" data-actions-box="true" data-virtual-scroll="false">
                                 <option value="">NSO</option>
-                                <option value="">Form 137</option>
-                                <option value="">Form 138</option>
-                                <option value="">High school diploma</option>
-                                <option value="">College Diploma</option>
-                                <option value="">Others</option>
+                                <option value="f137">Form 137</option>
+                                <option value="f138">Form 138</option>
+                                <option value="hsd">High school diploma</option>
+                                <option value="cd">College Diploma</option>
+                                <option value="others">Others</option>
                             </select>
+                        </div>
+                        <div class="form-group d-none" id="newRequirements">
+                            <label for="">Add new requirements</label>
+                            <input type="text" placeholder="" class="form-control"/>
                         </div>
                     </form>
                 </div>
@@ -609,10 +614,11 @@
     <script>
         $(document).ready(function(){
             $('.my-select').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
-                console.log(['e', e])
-                console.log(['clickedIndex', clickedIndex])
-                console.log(['isSelected', isSelected])
-                console.log(['previousValue', previousValue])
+                if (e.target.value == 'others') {
+                    $('#newRequirements').removeClass('d-none');
+                } else {
+                    $('#newRequirements').addClass('d-none');
+                }
             });
 
 
