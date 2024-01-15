@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>School v1 - Education Level</title>
+    <title>School v1 - Classes</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -71,7 +71,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#academicSetup"
                     aria-expanded="true" aria-controls="academicSetup">
                     <i class="fas fa-fw fa-cog"></i>
@@ -81,7 +81,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Academic setup:</h6>
                         <a class="collapse-item" href="departments.html">Departments</a> <!-- Register the ff. College of Computer Studies, College of Education -->
-                        <a class="collapse-item active" href="educationLevel.html">Education Level</a> <!-- register ff. values: Highschool, elementary, College -->
+                        <a class="collapse-item" href="educationLevel.html">Education Level</a> <!-- register ff. values: Highschool, elementary, College -->
                         <a class="collapse-item" href="semester.html">Semester / School Year</a><!-- Register the ff. First Semester 2024 - 2025, Second semester 2024, 2024-2025 -->
                         <a class="collapse-item" href="courses.html">Courses</a> <!-- Register the ff. BSIT, BSCS, STEM, HUMMS -->
                         <a class="collapse-item" href="subjects.html">Subject</a> <!-- Register the ff. English, Math, PSYCH-->
@@ -156,7 +156,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#registrar"
                     aria-expanded="true" aria-controls="registrar">
                     <i class="fas fa-fw fa-folder"></i>
@@ -165,7 +165,7 @@
                 <div id="registrar" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Registrar:</h6>
-                        <a class="collapse-item" href="classes.html">Classes</a>
+                        <a class="collapse-item active" href="classes.html">Classes</a>
                         <a class="collapse-item" href="students.html">Students</a>
                         <a class="collapse-item" href="requirements.html">Requirements Setup</a>
                         <a class="collapse-item" href="enrollment.html">Enrollment</a>
@@ -343,41 +343,47 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Education Level</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Classes</h1>
                         <a
                             href="#"
                             class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
                             data-toggle="modal" data-target="#roomModal"
                         >
-                            <i class="fas fa-plus fa-sm text-white-50"></i> Add Education Level
+                            <i class="fas fa-plus fa-sm text-white-50"></i> Add Classes
                         </a>
                     </div>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Education Level</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Classes</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Level</th>
+                                            <th>Code</th>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Units</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Level</th>
+                                            <th>Code</th>
+                                            <th>Name</th>
+                                            <th>Department</th>
+                                            <th>Units</th>
                                             <th>Actions</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>Elementary</td>
+                                            <td>ENG101</td>
+                                            <td>English 101</td>
+                                            <td>English Studies</td>
+                                            <td>3.0</td>
                                             <td>
                                                 <a href="#" class="btn btn-warning btn-icon-split btn-sm">
                                                     <span class="icon text-white">
@@ -392,40 +398,10 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>2</td>
-                                            <td>Highschool</td>
-                                            <td>
-                                                <a href="#" class="btn btn-warning btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-edit"></i>
-                                                    </span>
-                                                </a>
-                                                <a href="#" class="btn btn-danger btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-trash"></i>
-                                                    </span>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Senior High School</td>
-                                            <td>
-                                                <a href="#" class="btn btn-warning btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-edit"></i>
-                                                    </span>
-                                                </a>
-                                                <a href="#" class="btn btn-danger btn-icon-split btn-sm">
-                                                    <span class="icon text-white">
-                                                        <i class="fas fa-trash"></i>
-                                                    </span>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>College</td>
+                                            <td>ALG101</td>
+                                            <td>Algebra 101</td>
+                                            <td>Math Studies</td>
+                                            <td>3.0</td>
                                             <td>
                                                 <a href="#" class="btn btn-warning btn-icon-split btn-sm">
                                                     <span class="icon text-white">
@@ -487,7 +463,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add new education level</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add new Subject</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -497,7 +473,25 @@
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
                                 <input type="text" class="form-control" id="exampleFirstName"
-                                    placeholder="Education Level Name (e.g. Highschool / Elementary)">
+                                    placeholder="Code (e.g. ENG101, ALG101)">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                <input type="text" class="form-control" id="exampleFirstName"
+                                    placeholder="Name (e.g. English 101)">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                <input type="text" class="form-control" id="exampleFirstName"
+                                    placeholder="Description">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                <input type="number" class="form-control" id="exampleFirstName"
+                                    placeholder="Units">
                             </div>
                         </div>
                     </form>
@@ -527,6 +521,13 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.my-select').selectpicker();
+        })
+    </script>
 
 </body>
 
